@@ -1,0 +1,8 @@
+<div class="market-list">
+  @for (market of markets; track market.id) {
+    <div class="market">
+      <span>{{market.name}}</span>
+      <app-market-stats [marketId]="market.id" [game]="game"></app-market-stats>
+    </div>
+  }
+</div>

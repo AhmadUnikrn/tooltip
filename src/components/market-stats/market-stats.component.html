@@ -1,0 +1,14 @@
+<div class="stats-container">
+  <button class="tooltip-trigger" (click)="tooltipOpen.set(true)" #tooltipToggle>Stats</button>
+  @if (tooltipOpen()) {
+    <div class="tooltip-container" [class]="position()">
+        <svg class="tooltip-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+            <path d="M5 6L0 0L10 0L5 6Z" fill="#114A34"/>
+        </svg>
+        <div class="tooltip-content">
+            {{position()}}
+        </div>
+    </div>
+  }
+</div>
+
